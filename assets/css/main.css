@@ -1825,6 +1825,9 @@ input, select, textarea {
 	}
 
 /* Button */
+	header .button {
+		background: #C79CC8;
+	}
 
 	input[type="submit"],
 	input[type="reset"],
