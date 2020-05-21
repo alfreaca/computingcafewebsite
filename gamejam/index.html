@@ -39,7 +39,54 @@
 					</nav>
 
 				<!-- Main -->
+				
 					<div id="main">
+						<section id="countdown" class="main">
+							<div class="spotlight">
+								<div class="content">
+									<header class="major">
+										<h1><p id="demo">JAM STARTS IN {0}</p></h1>
+									</header>
+									<script>
+										String.prototype.format = function(...args) {
+    										return this.replace(/(\{\d+\})/g, function(a) {
+      											return args[+(a.substr(1, a.length - 2)) || 0];
+    										});
+  										};
+
+										// Set the date we're counting down to
+										var countDownDate = new Date("May 23, 2020 00:00:00").getTime();
+										
+										// Update the count down every 1 second
+										var x = setInterval(function() {
+										
+										  // Get today's date and time
+										  var now = new Date().getTime();
+										
+										  // Find the distance between now and the count down date
+										  var distance = countDownDate - now;
+										
+										  // Time calculations for days, hours, minutes and seconds
+										  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+										  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+										  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+										  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+										
+										  // Display the result in the element with id="demo"
+										  var cdownString = (days + "d " + hours + "h "
+										  + minutes + "m " + seconds + "s ").bold();
+										  document.getElementById("demo").innerHTML = "JAM STARTS IN {0}".format(cdownString);
+
+										  // If the count down is finished, write some text
+										  if (distance < 0) {
+											clearInterval(x);
+											document.getElementById("demo").innerHTML += "EXPIRED";
+										  }
+										}, 1000);
+										</script>
+								</div>
+							</div>
+						</section>
 
 						<!-- Introduction -->
 							<section id="introduction" class="main">
