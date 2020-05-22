@@ -98,6 +98,7 @@
 											var cdownString = (days + "d " + hours + "h "
 											+ minutes + "m " + seconds + "s ").bold();
 											document.getElementById("demo").innerHTML = "GOOD LUCK! {0} REMAINING!".format(cdownString);
+											document.getElementById("theme").innerHTML = "TECHNOLOGY".format(cdownString);
 
 											if (distance < 0) {
 												document.getElementById("demo").innerHTML = "The jam is now over, please vote on other games. Thanks for participating!"
@@ -118,7 +119,7 @@
 										</header>
 										<p>Welcome to Computing Cafe's first (hopefully of many) game jams! If you are unfamiliar with the concept of a game jam, you are given a set amount of time (in our case, it's 4 days) to create a game around a specific theme.
 											We thought this could be a cool way to inject some more life into this server. So without further ado, let's get into it.<br><br>
-											The theme we picked for this game jam is: <b><u>(TO BE RELEASED).</u></b> <br> This is specifically rather open ended to leave it up to your interpretation and to allow some creativity.
+											The theme we picked for this game jam is: <b><u id="theme">(TO BE RELEASED).</u></b> <br> This is specifically rather open ended to leave it up to your interpretation and to allow some creativity.
 										</p>
 									</div>
 								</div>
@@ -131,11 +132,12 @@
 										<header class="major">
 											<h2>Rules</h2>
 										</header>
-										<p>1. You have 4 days to create a game surrounding the theme of (TO BE RELEASED).<br>
+										<p>1. You have 4 days to create a game surrounding the theme above.<br>
 										2. You can enter on your own or in teams of no more than 3 people.<br>
 										3. All assets used in the game <b>must</b> be made by you or a member of your team.<br>
-										4. This one goes without saying really but the game <b>must</b> be your own work. <br>
-										5. Have some fun with it (not really a rule but I'd like you to do this :)).
+										4. All game engines are allowed, within reason (i.e. a finished game does not count as an engine)<br>
+										5. This one goes without saying really but the game <b>must</b> be your own work. <br>
+										6. Have some fun with it (not really a rule but I'd like you to do this :)).
 										</p>
 									</div>
 								</div>
@@ -148,7 +150,7 @@
 										<header class="major">
 											<h2>How do I enter?</h2>
 										</header>
-										<p>On the 23rd of May, the game jam will official start. You will then have until the 26th to create the game. Once you have finished (this can be at any point between those dates), go into the server and
+										<p>On the 23rd of May, the game jam will start. You will then have until the end of the 26th to create the game. Once you have finished (this can be at any point between those dates), go into the server and
 											enter the !submit command. From here the bot will DM you to ask for some small things needed for your submission. After the game jam has ended, all submissions will be put into a channel for people to be able to vote on them.
 											There will be multiple voting categories, so even if you don't win the graphics prize, you could win the sound or creativity prize, because we all do better in different areas. I wish you luck.
 										</p>
