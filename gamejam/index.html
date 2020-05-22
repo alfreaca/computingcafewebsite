@@ -55,7 +55,8 @@
   										};
 
 										// Set the date we're counting down to
-										var countDownDate = new Date("May 23, 2020 00:00:00").getTime();
+										var countDownDate = new Date("May 23, 2020 00:00:00");
+										countDownDate = Date.UTC(countDownDate.getUTCFullYear(), countDownDate.getUTCMonth(), countDownDate.getUTCDate(), countDownDate.getUTCHours(), countDownDate.getUTCMinutes(), countDownDate.getUTCSeconds());
 										
 										// Update the count down every 1 second
 										var x = setInterval(function() {
