@@ -62,7 +62,8 @@
 										var x = setInterval(function() {
 										
 										  // Get today's date and time
-										  var now = new Date().getTime();
+										  var now = new Date();
+										  now = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());
 										
 										  // Find the distance between now and the count down date
 										  var distance = countDownDate - now;
