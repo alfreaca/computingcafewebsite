@@ -56,14 +56,14 @@
 
 										// Set the date we're counting down to
 										var countDownDate = new Date("May 23, 2020 00:00:00");
-										countDownDate = Date.UTC(countDownDate.getUTCFullYear(), countDownDate.getUTCMonth(), countDownDate.getUTCDate(), countDownDate.getUTCHours(), countDownDate.getUTCMinutes(), countDownDate.getUTCSeconds());
+										countDownDate = (countDownDate.getTime() + countDownDate.getTimezoneOffset() * 60000);
 										
 										// Update the count down every 1 second
 										var x = setInterval(function() {
 										
 										  // Get today's date and time
 										  var now = new Date();
-										  now = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());
+										  now = (now.getTime() + now.getTimezoneOffset() * 60000);
 										
 										  // Find the distance between now and the count down date
 										  var distance = countDownDate - now;
