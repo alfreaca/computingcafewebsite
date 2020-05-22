@@ -55,18 +55,19 @@
   										};
 
 										// Set the date we're counting down to
-										var countDownDateStr = new Date("May 23, 2020 00:00:00").toUTCString();
+										var countDownDateStr = new Date("May 22, 2020 23:00:00").toUTCString();
+										console.log(countDownDateStr);
 										var countDownDate = new Date(countDownDateStr);
 										
 										// Update the count down every 1 second
 										var x = setInterval(function() {
 										
 										  // Get today's date and time
-										  var nowStr = new Date().toUTCString();
-										  var now = new Date(nowStr);
+										  var nowStr = new Date().toUTCString().slice(0, -4);
+										  var now = new Date(nowStr)
 										
 										  // Find the distance between now and the count down date
-										  var distance = countDownDate - now;
+										  var distance = countDownDate.getTime() - now.getTime();
 										
 										  // Time calculations for days, hours, minutes and seconds
 										  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -81,8 +82,7 @@
 
 										  // If the count down is finished, write some text
 										  if (distance < 0) {
-											clearInterval(x);
-											document.getElementById("demo").innerHTML += "EXPIRED";
+											document.getElementById("demo").innerHTML = "GOOD LUCK!";
 										  }
 										}, 1000);
 										</script>
